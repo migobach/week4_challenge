@@ -1,55 +1,17 @@
 require 'numbers_in_words'
 require 'pry'
 
-# def menu 
-#   print `clear`
-#   puts "-- 3 is the magic number --"
-#   @number = gets.strip.to_i
-#   magic
-# end
-
-# def magic
-
-#   identify length
-
-#   puts
-
-#   then an if / else statement. 
-
-# end 
-
-# menu
-
-# -------------------------------------
+def start
   puts "Enter a number"
   num = gets.strip.to_i
+  numl = NumbersInWords.in_words(num).gsub(" ","").length
 
-
-  while 5 <= num 
-    x = NumbersInWords.in_words(num)
-    xl = x.length
-    puts "#{num} is #{xl}"
-  
-    #  need to edit the while loop
+while numl != 4
+  print "#{numl} is "
+  numl = NumbersInWords.in_words(numl).length
+  puts numl
   end
-  
-  puts "and #{zl} is the magic number."
-  
-
-  # try doing it as an if else statement
-  
-  # y= NumbersInWords.in_words(xl)
-  # yl = y.length
-  # puts "#{xl} is #{yl}"
-
-  # z= NumbersInWords.in_words(yl)
-  # zl = z.length
-  # puts "#{yl} is #{zl}"
-  
-
-  # binding.pry
-
-
+  puts "4 is the magic number"
 end
 
-magic
+start
